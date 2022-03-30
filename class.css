@@ -1,0 +1,787 @@
+@charset "UTF-8";
+    
+    * {
+        box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: "NEXONFootballGothic";
+        }
+
+        header {
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-width: 1340px;
+            height: 80px;
+            display: block;
+            padding: 0;
+            position: absolute;
+            z-index: 50;      
+        }
+
+        div, section {
+            display: block;
+        }
+
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 48px;
+            width: 209px;
+            height: 66px;
+            display: block;
+            z-index: 11;
+            margin: 9px 0 0;
+            letter-spacing: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .nav {
+            transition: 0.2s;
+            position: relative;
+            display: block;
+            height: 80px;
+            background: rgba(0,0,0,0.0001 );
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;          
+        }
+
+        .nav:hover {
+            height: 350px;
+            background: black;
+        }
+
+
+        .nav:before {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 79px;
+            opacity: 0.1;
+            background: #fff;
+            z-index: 2;
+        }
+        
+
+        .nav > ul {            
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            padding-left: 280px;
+            position: relative;
+            transition: height 0.3s;
+            height: 80px;
+            width: 100%;
+        }
+        
+
+        .nav > ul > li {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 80px;           
+            white-space: nowrap;
+        }
+
+        .nav > ul > li > a {
+            display: block;
+            position: relative;
+            height: 80px;
+            font-size: 17px;
+            color: #fff;
+            padding: 30px 6px 0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 100%;
+        }
+
+
+
+        .sub {
+            display: none;
+            position: absolute;
+            left: 7px;
+            top: 100px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav:hover .sub {
+            display: block;
+        }
+
+        .nav .sub li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav .sub a {
+            transform: translateZ(0);
+            transition: color .2s;
+            display: inline-block;
+            position: relative;
+            height: 33px;
+            padding: 8px 0 0;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #888;
+            text-decoration: none;
+            width: 100%;
+        }        
+
+        .nav .sub a:hover {
+            color: #f1f1f1;
+            text-decoration: underline;
+        }
+
+        .rightnav {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        .rightnav-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        .login {
+            display: block;
+            color: #fff;
+            padding: 25px 20px 20px 0;
+            transition: 0.2s;
+        }
+
+        .login:hover {
+            color: darkviolet;
+        }
+
+        .pc {
+            display: block;
+            position: relative;
+            padding: 8px 8px;
+            background: darkslateblue;
+            border-radius: 30px;
+            margin: 20px 0 20px 0;
+            color: #fff;
+        }
+
+        .gamestart {
+            display: block;
+            position: relative;
+            margin-left: 11px;
+            width: 250px;
+            height: 80px;
+            outline: none;
+            border: none;
+            margin-top: -1px;
+            font-size: 25px;
+            font-weight: 600;
+            color: #fff;
+            background: darkorchid;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .gamestart:hover {
+            background: blueviolet;
+        }
+
+        .navline {
+            transition: 0.2s;
+            position: absolute;
+            left: 0;
+            top: 78px;
+            height: 5px;
+            background: #8809f6;
+            width: 0%;
+            z-index: -1;
+        }
+
+        .effect {
+            position: absolute;
+            width: 55px;
+            height: 3px;
+            top: 80px;
+            left: -10%;
+            background: deeppink;
+            transition: 0.2s ease-in;
+            z-index: 5px; 
+
+        }
+
+        .nav ul li:nth-child(1):hover~ .effect {
+            position: absolute;
+            left: 290px;
+        }
+        .nav ul li:nth-child(2):hover~ .effect {
+            position: absolute;
+            left: 378px;
+        }
+        .nav ul li:nth-child(3):hover~ .effect {
+            position: absolute;
+            left: 465px;
+        }
+
+        .nav ul li:nth-child(4):hover~ .effect {
+            position: absolute;
+            left: 555px;
+        }
+
+        .nav ul li:nth-child(5):hover~ .effect {
+            position: absolute;
+            left: 645px;
+        }
+
+        .nav ul li:nth-child(6):hover~ .effect {
+            position: absolute;
+            left: 725px;
+        }
+
+        .nav ul li:nth-child(7):hover~ .effect {
+            position: absolute;
+            left: 795px;
+        }
+
+        .nav ul li:nth-child(8):hover~ .effect {
+            position: absolute;
+            left: 875px;
+        }
+
+        .nav ul li:nth-child(9):hover~ .effect {
+            position: absolute;
+            left: 980px;
+        }
+
+        .nav ul li:nth-child(10):hover~ .effect {
+            position: absolute;
+            left: 1067px;
+        }
+
+        header.fixed {
+            position: fixed;
+            background: black;
+        }
+
+        .middle {
+            position: relative;
+            width: 100%;
+        }
+
+        .main {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }    
+
+        .main .content {
+            background: black;
+        }
+
+        .class-content {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            min-height: 768px;
+            background: black;
+        }
+
+        .content {
+            overflow: hidden;
+            position: relative;
+            flex: 25%;
+            min-height: 50vh;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        .class-content #warrior {
+            background: url("img2/class1-bg.jpg") no-repeat 100% 100%;
+            background-size: cover;
+        }
+        .class-content #fighter-m {
+            background: url("img2/class2-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #fighter-f {
+            background: url("img2/class3-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #hunter-m {
+            background: url("img2/class4-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #hunter-f {
+            background: url("img2/class5-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #magician {
+            background: url("img2/class6-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #assassin {
+            background: url("img2/class7-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .class-content #special {
+            background: url("img2/class8-bg.jpg") no-repeat 50% 50%;
+            background-size: cover;
+        }
+
+        .class-content .content .chractor {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .class-content #warrior .chractor {
+            background: url("img2/class1-chractor.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .class-content #fighter-m .chractor {
+            background: url("img2/class2-charctor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #fighter-f .chractor {
+            background: url("img2/class3-charctor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #hunter-m .chractor {
+            background: url("img2/class4-chractor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #hunter-f .chractor {
+            background: url("img2/class5-charctor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #magician .chractor {
+            background: url("img2/class6-charctor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #assassin .chractor {
+            background: url("img2/class7-chractor.png");
+            background-size: 100% 100%;
+        }
+        .class-content #special .chractor {
+            background: url("img2/class8-chractor.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;            
+            background: #252f3e;
+            visibility: hidden;
+            display: none;
+            transition: 0.2s;          
+        }
+
+        .class-content  h3 {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-weight: 400;                
+            bottom: 50px;
+            font-size: 30px;
+            padding: 165px 0 0;
+        }
+
+        .class-content h3:before {
+            content: "";
+            width: 79px;
+            height: 50%;
+            position: absolute;
+            top: 103px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-size: cover;
+        }
+        
+        .class-content #warrior h3:before {
+            background: url("img2/class1-mark.png") no-repeat;
+        }
+        .class-content #fighter-m h3:before {
+            background: url("img2/class2-mark.png") no-repeat;
+        }
+        .class-content #fighter-f h3:before {
+            background: url("img2/class3-mark.png") no-repeat;
+        }
+        .class-content #hunter-m h3:before {
+            background: url("img2/class4-mark.png") no-repeat;
+        }
+        .class-content #hunter-f h3:before {
+            background: url("img2/class5-mark.png") no-repeat;
+        }
+        .class-content #magician h3:before {
+            background: url("img2/class6-mark.png") no-repeat;
+        }
+        .class-content #assassin h3:before {
+            background: url("img2/class7-mark.png") no-repeat;
+        }.class-content #special h3:before {
+            background: url("img2/class8-mark.png") no-repeat;
+        }
+
+        .class-content .index .class-info {
+            position: absolute;
+            left: 40px;
+            max-width: 360px;
+            z-index: 5;
+            top: 148px;
+            width: 100%;            
+        }
+
+        .class-content .class-info:before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            top: -40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .class-content #warrior .class-info:before {            
+            background: url("img2/class1-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #fighter-m .class-info:before {            
+            background: url("img2/class2-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #fighter-f .class-info:before {            
+            background: url("img2/class3-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #hunter-m .class-info:before {            
+            background: url("img2/class4-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #hunter-f .class-info:before {            
+            background: url("img2/class5-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #magician .class-info:before {            
+            background: url("img2/class6-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #assassin .class-info:before {            
+            background: url("img2/class7-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+        .class-content #special .class-info:before {            
+            background: url("img2/class8-mark.png") no-repeat;
+            background-size: 40px 30px;
+        }
+
+        .class-content .index h4 {
+            position: absolute;
+            top: 70px;
+            left: 90px;
+            font-size: 28px;
+            font-family: "";
+            font-weight: 500;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #fff;
+        }
+        
+
+        .class-content .index .class-info .data {
+            color: #a3b0c1;
+            font-size: 14px;
+        }    
+
+        
+        .class-content .index .class-info .class-kind {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .class-content .index .class-info .class-kind  a {
+            display: block;
+            width: 73px;
+            height: 80px;
+            font-size: 12px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            color: #a3b0c1;
+            padding-top: 58px;
+        }
+
+        .class-content .index .class-info .class-kind .class-list span:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 46px;
+            height: 53px;    
+            opacity: 1;
+            transition: opacity 0.2s;      
+        }
+
+        .class-content .index .class-info .class-kind .dest span:before {
+            background: url("img2/class1-index1-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .warlod span:before {
+            background: url("img2/class1-index2-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .berser span:before {
+            background: url("img2/class1-index3-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .holy span:before {
+            background: url("img2/class1-index4-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .stliker span:before {
+            background: url("img2/class2-index1-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .batle span:before {
+            background: url("img2/class3-index1-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .infight span:before {
+            background: url("img2/class3-index2-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .soul span:before {
+            background: url("img2/class3-index3-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .lance span:before {
+            background: url("img2/class3-index4-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .devil span:before {
+            background: url("img2/class4-index1-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .blas span:before {
+            background: url("img2/class4-index2-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .hawk span:before {
+            background: url("img2/class4-index3-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .scout span:before {
+            background: url("img2/class4-index4-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .gunsle span:before {
+            background: url("img2/class5-index1-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .bard span:before {
+            background: url("img2/class6-index1-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .summer span:before {
+            background: url("img2/class6-index2-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .alkana span:before {
+            background: url("img2/class6-index3-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .sosa span:before {
+            background: url("img2/class6-index4-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .blade span:before {
+            background: url("img2/class7-index1-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .demo span:before {
+            background: url("img2/class7-index2-1.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .ripe span:before {
+            background: url("img2/class7-index3-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .doha span:before {
+            background: url("img2/class8-index1-1.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .class-list span:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 46px;
+            height: 53px;    
+            opacity: 0;
+            transition: opacity 0.2s;      
+        }
+
+        .class-content .index .class-info .class-kind .dest span:after {
+            background: url("img2/class1-index1-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .warlod span:after {
+            background: url("img2/class1-index2-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .berser span:after {
+            background: url("img2/class1-index3-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .holy span:after {
+            background: url("img2/class1-index4-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .stliker span:after {
+            background: url("img2/class2-index1-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .batle span:after {
+            background: url("img2/class3-index1-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .infight span:after {
+            background: url("img2/class3-index2-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .soul span:after {
+            background: url("img2/class3-index3-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .lance span:after {
+            background: url("img2/class3-index4-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .devil span:after {
+            background: url("img2/class4-index1-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .blas span:after {
+            background: url("img2/class4-index2-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .hawk span:after {
+            background: url("img2/class4-index3-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .scout span:after {
+            background: url("img2/class4-index4-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .gunsle span:after {
+            background: url("img2/class5-index1-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .bard span:after {
+            background: url("img2/class6-index1-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .summer span:after {
+            background: url("img2/class6-index2-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .alkana span:after {
+            background: url("img2/class6-index3-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .sosa span:after {
+            background: url("img2/class6-index4-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .blade span:after {
+            background: url("img2/class7-index1-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .demo span:after {
+            background: url("img2/class7-index2-2.png");
+            background-size: 100% 100%;
+        }
+        .class-content .index .class-info .class-kind .ripe span:after {
+            background: url("img2/class7-index3-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind .doha span:after {
+            background: url("img2/class8-index1-2.png");
+            background-size: 100% 100%;
+        }
+
+        .class-content .index .class-info .class-kind a:hover span {
+            color: #fff;
+        }
+        .class-content .index .class-info .class-kind a:hover span:after {
+            opacity: 1;
+        }
+
+        .class-content .content:hover .index {
+            display: block;
+            visibility: visible;
+        }
+
+        @media (max-width:840px){
+            #fixbar {
+                display: none;
+            }
+
+            .content {
+                flex: 50%;
+            }
+
+            .index {
+                width: 60%;
+            }
+        }
